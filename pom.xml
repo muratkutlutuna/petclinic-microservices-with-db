@@ -15,6 +15,7 @@
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
+
     <modules>
         <module>spring-petclinic-admin-server</module>
         <module>spring-petclinic-customers-service</module>
@@ -74,6 +75,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>maven-releases</name>
+            <url>http://172.31.91.74:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>maven-snapshots</name>
+            <url>http://172.31.91.74:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
     <profiles>
         <profile>
             <id>springboot</id>
